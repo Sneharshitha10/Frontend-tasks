@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <style>
+	    
+		body {
+    background:linear-gradient(135deg, #89f7fe, #66a6ff);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+		.login-box{
+		width:360px;
+		height:auto;
+		margin:auto;
+		background-color:white;
+		border-radius:10px;
+	  }
+	  h1{
+		text-align:center;
+		padding-top:20px;
+	  }
+	  form{
+		width:300px;
+		margin-left:20px;
+	  }
+	  form label{
+	    display:flex;
+		margin-top:20px;
+		font-size:18px;
+	  }
+      form input{
+        width:100%;
+        padding:7px;
+		border-radius:10px;
+      }	
+      input[type="button"]{
+	    width:320px;
+		height:35px;
+		margin-top:25px;
+		background-color:#49c1a2;
+		font-size:18px;
+		color:white;
+	}
+    input[type="button"]:hover {
+    background-color: #3a9e87;
+    }	
+	.para{
+	   text-align:center;
+	   font-size:18px;
+	   padding-top:10px;
+	  } 
+	  
+       </style>
+   </head>
+   <body>
+      <div class="login-box">
+	  <h1> LOGIN FORM </h1>
+	  <form action="">
+	
+        <label for="mailid"> Email </label>
+        <input type="text" id="mail" name="mail"><br>	
+		
+        <label for="password"> Password </label>
+        <input type="text" id="pass" name="pass"><br>	
+
+        <input type="button" value="Submit">
+		
+		<p class="para"> Not have an account? <a href="Signupform.html"> Sign Up Here </a> </p>
+		
+     </form>		
+	  
+   </body>
+</html>   

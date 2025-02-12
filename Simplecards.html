@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Simple Cards</title>
+<style>
+.card-container {
+  display: flex;                       
+  justify-content: space-around;      
+}
+
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  transition: 0.3s;
+  width: 25%;
+  text-align: center;
+  padding: 10px;
+  
+}
+
+.card:hover {
+  box-shadow: 0 8px 16px 0 rgba(180, 130, 255, 0.5);
+  transform: scale(1.05); 
+}
+
+.container {
+  padding: 2px 16px;
+}
+
+.card img {
+  width: 100%;
+  height:70%;
+}
+</style>
+</head>
+<body>
+
+<h2 style="text-align:center;">SIMPLE CARDS</h2>
+
+<div class="card-container">
+  
+  <div class="card">
+    <img src="./images/css image.jpeg" alt="css">
+    <div class="container">
+      <h3><b>css tutorial</b></h4> 
+    </div>
+  </div>
+
+  <div class="card">
+    <img src="./images/html image.jpeg" alt="html">
+    <div class="container">
+      <h3><b>html tutorial</b></h4> 
+    </div>
+  </div>
+  
+  
+  
+</div>
+
+</body>
+</html>

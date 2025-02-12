@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Positioning Cards</title>
+    <style>
+        body {
+           
+            padding: 20px;
+            height: 200vh; 
+        }
+
+        .container {
+            position: relative;
+            width: 90%;
+            margin: auto;
+            padding: 20px;
+            border: 2px solid black;
+        }
+
+        .card {
+            width: 200px;
+            height: 100px;
+            text-align: center;
+            font-size: 18px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 10px;
+        }
+
+    
+        .absolute {
+            position: absolute;
+            top: 50px;
+            left: 250px;
+            background-color: blue;
+        }
+
+    
+        .fixed {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background-color: red;
+        }
+
+     
+        .sticky {
+            position: sticky;
+            top: 40px;
+            background-color: green;
+        }
+
+    
+        .static {
+            position: static;
+            background-color: purple;
+        }
+
+    
+        .relative {
+            position: relative;
+            left: 30px;
+            background-color: orange;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h2 style="text-align:center">Simple cards with positioning</h2>
+
+        <div class="card absolute">Absolute</div>
+        <div class="card fixed">Fixed</div>
+        <div class="card sticky">Sticky</div>
+        <div class="card static">Static</div>
+        <div class="card relative">Relative</div>
+    </div>
+
+    <div style="height: 50vh;"></div>
+
+</body>
+</html>
