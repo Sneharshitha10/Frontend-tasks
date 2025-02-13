@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            .container {
+                padding:50px;
+                display: flex; 
+                justify-content: center; 
+                gap: 80px;
+            }
+
+            .loader {
+                width: 100px;
+                height: 100px;
+                border: 10px solid #f3f3f3;
+                animation: spin 2s linear infinite;
+            }
+
+            @keyframes spin {
+                0% { transform: rotate(0deg); }
+                100% { transform: rotate(360deg); }
+            }     
+            
+            .loader1 {
+                border-top: 10px solid #3498db;
+            }
+
+            .loader2 {
+                border-top: 10px solid #3498db;
+                border-radius: 50%;
+            }
+            .loader3 {
+                border-radius: 50%;
+                animation: colorChange 2s linear infinite,spin 2s linear infinite;;
+            }
+            @keyframes colorChange {
+                0% { border-top-color: blue; }
+                25% { border-top-color: green; }
+                50% { border-top-color: red; }
+                75% { border-top-color: yellow; }
+                100% { border-top-color: blue; } 
+            }
+
+            .buttonload {
+                 background-color:violet; 
+                 border: none; 
+                 color: white;
+                 padding: 12px 24px;
+                 font-size: 16px; 
+            }
+
+
+           .fa {
+               margin-left: -12px;
+               margin-right: 8px;
+            }
+
+            .fade-box
+            {
+                width:100px;
+                height:100px;
+                background-color: #e74c3c;
+                opacity:0;
+                transition:opacity 0.5s ease-in-out;
+            }
+            .fade-box:hover
+            {
+                opacity:1;
+            }
+
+
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <div class="loader loader1"></div>
+            <div class="loader loader2"></div>
+            <div class="loader loader3"></div>
+       </div>
+
+       <div class="container1">
+        <h2>Loading Buttons</h2>
+        <button class="buttonload">
+           <i class="fa fa-spinner fa-spin"></i>Loading
+        </button>
+        <button class="buttonload">
+           <i class="fa fa-circle-o-notch fa-spin"></i>Loading
+        </button>
+        <button class="buttonload">
+            <i class="fa fa-refresh fa-spin"></i>Loading
+        </button>
+       </div>
+
+       <p> fade in out transition  -- to see the effect hover below this para <p>
+        <div class="fade-box"></div>
+    </body>
+</html>
