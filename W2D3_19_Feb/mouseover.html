@@ -1,0 +1,28 @@
+<html>
+    <head>
+        <title> Mouseover </title>
+        <link rel="stylesheet" href="style1.css">
+        <script>
+            function newdiv()
+            {
+                  document.querySelector("#c1 h3").innerHTML="CSS";
+                  document.querySelector("#c1 p").innerHTML="This is CSS tutorial ";
+            }
+
+            function olddiv()
+            {
+                document.querySelector("#c1 h3").innerHTML="HTML";
+                document.querySelector("#c1 p").innerHTML="This is HTML tutorial ";
+                
+            }
+        </script>
+    </head>
+    <body>
+        <div class="container">
+            <div onmouseover="newdiv()" onmouseout="olddiv()" class="card" id="c1">
+                <h3> HTML </h3>
+                <p> This is HTML tutorial </p>
+            </div>
+        </div>
+    </body>
+</html>
