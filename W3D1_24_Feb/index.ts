@@ -163,6 +163,72 @@ let textBox : UIWidget = {
 };  */
 
 
+/* ****************************  Type assertion  ******************************** */
+/* let username : unknown = "Sneha";
+let userid : number = <number> username;
+
+let firstname : string  = username as string;  */
+
+
+
+
+/* ****************************  Type inference  ******************************** */
+/* let data = 10;
+data = 20;
+const val = 20;
+val = 30;  */
+
+
+/* ****************************  functions  ******************************** */
+/* function sum(a : number,b : number, c?: number)
+{
+    return a + b;
+}
+console.log(sum(10,20)); 
+
+function printMessage(message : string) : void
+{
+    console.log(message);
+
+}
+printMessage("Sneha");  */
+
+
+
+/* ****************************  classes  ******************************** */
+class Human
+{
+    private name : string;
+    protected age : number;
+    public profession : string;
+
+    constructor(name : string , age : number, profession : string)
+    {
+        this.name = name;
+        this.age = age;
+        this.profession = profession;
+    }
+
+    displayInfo(): void {
+        console.log(`Name: ${this.name}, Age: ${this.age}, Profession: ${this.profession}`);
+    }
+}
+
+let sneha = new Human("Sneha",22,"Developer");
+console.log(sneha);
+//console.log("Name:", sneha.name);
+//console.log("Age:", sneha.age);
+console.log("Profession:", sneha.profession);
+sneha.displayInfo();
+
+
+
+
+
+
+
+
+
 
 
 

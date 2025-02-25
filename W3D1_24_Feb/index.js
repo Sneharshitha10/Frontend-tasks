@@ -57,12 +57,103 @@ console.log(calculate(10000));  */
 } = {id : 1, name : "sneha", retire : (date : Date) => console.log(date)};
 //employee.id = 2;
 employee.retire(new Date());  */
+// Parameter type annotation
+/* function greet(name: string) {
+    //                 ^^^^^^^^
+    console.log("Hello, " + name.toUpperCase() + "!!");
+  }
+  greet('Sneha'); */
+//return type annotation  
+/* function getFavoriteNumber(): number {
+    return 26;
+  }   */
+/* ****************************  Interface  ******************************** */
+/* interface Point {
+    x: number;
+    y: number;
+}
+function printCoord(pt: Point)
+{
+    console.log("The coordinate's x value is " + pt.x);
+    console.log("The coordinate's y value is " + pt.y);
+}
+printCoord({ x: 100, y: 100 });  */
+/* ****************************  Type alias ******************************** */
+/* type Point = {
+    x: number;
+    y: number;
+};
+       
+function printCoord(pt: Point)
+{
+    console.log("The coordinate's x value is " + pt.x);
+    console.log("The coordinate's y value is " + pt.y);
+}
+printCoord({ x: 100, y: 100 });  */
 /* ****************************  Union  ******************************** */
-function kgToLbs(weight) {
-    if (typeof weight === 'number')
+/*  function kgToLbs(weight : number | string) : number
+{
+    if(typeof weight === 'number')
         return weight * 2;
     else
         return parseInt(weight) * 2;
 }
 console.log(kgToLbs(10));
-console.log(kgToLbs('10kg'));
+console.log(kgToLbs('10kg'));  */
+/* ****************************  Intersection  ******************************** */
+/* type Draggable = {
+    drag : () => void
+};
+
+type Resizable = {
+    resize : () => void
+};
+
+type UIWidget = Draggable & Resizable;
+
+let textBox : UIWidget = {
+    drag : () => {},
+    resize : () => {}
+
+};  */
+/* ****************************  Type assertion  ******************************** */
+/* let username : unknown = "Sneha";
+let userid : number = <number> username;
+
+let firstname : string  = username as string;  */
+/* ****************************  Type inference  ******************************** */
+/* let data = 10;
+data = 20;
+const val = 20;
+val = 30;  */
+/* ****************************  functions  ******************************** */
+/* function sum(a : number,b : number, c?: number)
+{
+    return a + b;
+}
+console.log(sum(10,20));
+
+function printMessage(message : string) : void
+{
+    console.log(message);
+
+}
+printMessage("Sneha");  */
+/* ****************************  classes  ******************************** */
+var Human = /** @class */ (function () {
+    function Human(name, age, profession) {
+        this.name = name;
+        this.age = age;
+        this.profession = profession;
+    }
+    Human.prototype.displayInfo = function () {
+        console.log("Name: ".concat(this.name, ", Age: ").concat(this.age, ", Profession: ").concat(this.profession));
+    };
+    return Human;
+}());
+var sneha = new Human("Sneha", 22, "Developer");
+console.log(sneha);
+console.log("Name:", sneha.name);
+console.log("Age:", sneha.age);
+console.log("Profession:", sneha.profession);
+sneha.displayInfo();
