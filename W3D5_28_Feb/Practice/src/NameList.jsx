@@ -22,8 +22,11 @@ function NameList()
             age : 18
         }
     ]
+
+    const names = ['Bruce', 'clark' , 'diana']
     //const NameList = names.map(name => <h2> {name } </h2>)
-    const personList = persons.map(person => <Person person = {person} /> )
+    //const personList = persons.map(person => <Person key = {person.id} person = {person} /> )
+    const namesList = names.map((name,index) => <h2 key = {index}>{index} {name}</h2>)
     return(
         <div>
           { /* <h2>{ names[0] }</h2>
@@ -34,7 +37,7 @@ function NameList()
                 names.map(name => <h2> {name } </h2>)
             } */ }
 
-           {personList}
+           {namesList}
 
 
         </div>
