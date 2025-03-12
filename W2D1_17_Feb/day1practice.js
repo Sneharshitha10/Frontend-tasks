@@ -72,7 +72,7 @@ for(i=1;i<=5;i++)
 } */
 
 
-    
+
 
 
 
@@ -96,8 +96,26 @@ console.log(userName.repeat(3));
 
 let phone = "123-456-7890"
 
-console.log(phone.replaceAll("-",""));
+console.log(phone.replaceAll("-", ""));
 
-console.log(phone.padStart(15,"0"));
+console.log(phone.padStart(15, "0"));
 
-console.log(phone.padEnd(15,"0"));
+console.log(phone.padEnd(15, "0"));
+
+/* for(let i=10;i>=1;i--)
+{
+    if(i%2===0)
+        console.log(i);
+   
+} */
+
+let even = []
+let odd = []
+for (let i = 0; i < 10; i++) {
+    if (i % 2 == 0)
+        [even.unshift(i)]
+    else if (i % 2 !== 0)
+        [odd.unshift(i)]  
+}
+console.log(even)
+console.log(odd)

@@ -2,6 +2,7 @@ const store = require('./App/Store')
 //to dispatch the cake actions we need to import from cakeslice.js
 const cakeActions = require('./Features/Cake/cakeSlice').cakeActions
 const iceCreamActions = require('./Features/IceCream/iceCreamSlice').iceCreamActions
+const fetchUsers = require('./Features/user/userSlice').fetchUsers
 
 //log the initial state
 console.log('initial state',store.getState())
@@ -10,6 +11,8 @@ console.log('initial state',store.getState())
 const unsubscribe = store.subscribe(() => {
     console.log('updated state',store.getState()) 
 })
+
+store.dispatch(fetchUsers())
 
 store.dispatch(cakeActions.ordered())
 store.dispatch(cakeActions.ordered())
